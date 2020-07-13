@@ -2,9 +2,9 @@ const express = require('express')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const logger = require('morgan')
-const postsRoutes = require('./routes/posts')
+const postsRoutes = require('./routes/posts_routes')
 const db = require('./db/connection')
-const PORT = procees.env.PORT || 3000
+const PORT = process.env.PORT || 3000
 
 const app = express()
 
