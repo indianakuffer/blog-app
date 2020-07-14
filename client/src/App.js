@@ -2,10 +2,10 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Route, Switch } from 'react-router-dom'
-import Home from "./screens/Home"
-import PostDetails from "./screens/PostDetails"
-import PostCreate from "./screens/PostCreate"
-import PostEdit from "./screens/PostEdit"
+import Home from "./screens/Home/Home"
+import PostDetails from "./screens/PostDetails/PostDetails"
+import PostCreate from "./screens/PostCreate/PostCreate"
+import PostEdit from "./screens/PostEdit/PostEdit"
 
 function App() {
   return (
