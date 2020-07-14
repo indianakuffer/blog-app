@@ -1,9 +1,15 @@
 import React from 'react'
+import PostCard from "../PostCard/PostCard"
 
-export default function PostList() {
+export default function PostList(props) {
+
   return (
     <div>
-      PostList Component
+      {props.masterList && props.masterList.map(post => {
+        return <>
+          <PostCard title={post.title} author={post.author} imgUrl={post.imgUrl} id={post._id} />
+        </>
+      })}
     </div>
   )
 }
