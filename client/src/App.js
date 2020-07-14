@@ -12,9 +12,9 @@ function App() {
     <div className="App">
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/post/:id" exact component={PostDetails} />
-        <Route path="/post/create" exact component={PostCreate} />
-        <Route path="/post/:id/edit" exact component={PostEdit} />
+        <Route path="/posts/:id" exact component={PostDetails} />
+        <Route path="/posts/create" exact component={PostCreate} />
+        <Route path="/posts/:id/edit" exact component={PostEdit} />
       </Switch>
     </div>
   );
