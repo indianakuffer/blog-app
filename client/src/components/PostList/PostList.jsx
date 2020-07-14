@@ -1,9 +1,14 @@
 import React from 'react'
 
-export default function PostList() {
+export default function PostList(props) {
+
   return (
     <div>
-      PostList Component
+      {props.masterList && props.masterList.map(post => {
+        return <>
+          {post.title}
+        </>
+      })}
     </div>
   )
 }
