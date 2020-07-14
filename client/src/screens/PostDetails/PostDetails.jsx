@@ -17,14 +17,15 @@ export default function PostDetails() {
     helper();
   }, []);
 
-  const deletePost = async (e) => {
-    e.preventDefault()
-    const response = await deletePost(params.id)
+  const deleteThis = async () => {
+    await deletePost(params.id)
+    setDeleted(true)
   }
 
   if (deleted) {
     return <Redirect to='/' />
   }
+
 
   return (
     <Layout>
@@ -35,7 +36,7 @@ export default function PostDetails() {
           <img src={details.imgUrl} />
           <p>{details.content}</p>
           <Link to={`/posts/${params.id}/edit`}><button>Edit</button></Link>
-          <button onClick={deletePost}>Delete</button>
+          <button onClick={deleteThis}>Delete</button>
         </>}
     </Layout >
   );
