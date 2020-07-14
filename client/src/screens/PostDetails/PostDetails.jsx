@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { getPost } from "../../services/posts";
 import Layout from '../../components/shared/Layout/Layout'
 
@@ -20,11 +20,12 @@ export default function PostDetails() {
     <Layout>
       {details &&
         <>
-        <h2>{details.title}</h2>
-        <p>Written by: {details.author}</p>
-        <img src={details.imgUrl} />
-        <p>{details.content}</p>
-      </>}
-  </Layout>
+          <h2>{details.title}</h2>
+          <p>Written by: {details.author}</p>
+          <img src={details.imgUrl} />
+          <p>{details.content}</p>
+          <Link to={`/posts/${params.id}/edit`}><button>Edit</button></Link>
+        </>}
+    </Layout >
   );
 }
